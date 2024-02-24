@@ -1,0 +1,18 @@
+<% include ./partials/header.ejs %>
+<div class="w-full h-screen bg-center bg-cover bg-[url(https://images.unsplash.com/photo-1512867957657-38dbae50a35b?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] flex items-center justify-center">
+  <div class="w-[25vw] h-[60vh] bg-white px-10 py-10 rounded-[30px]">
+    <h1 class=" text-3xl text-center font-semibold text-zinc-700 leading-none tracking-tighter capitalize">Welcome to data to diet</h1>
+    <form action="/login" method="post">
+      <input class="border-2 rounded-md block mt-2 w-full px-3 py-2 " type="text" name="username" placeholder="username" />
+      <input class="border-2 rounded-md block mt-2 w-full px-3 py-2 " type="password" name="password" placeholder="password" />
+      <a class="mt-2 font-semibold text-zinc-700 inline-block" href="#">Forgot your password ?</a>
+      <input class="border-2  block mt-2 w-full px-3 py-2 bg-red-600 text-white rounded-full" type="submit" value="login" />
+      
+         
+    </form> 
+    <a class="inline-block mt-7 text-sm font-semibold text-zinc-700 text-center w-full" href="/register">Dont have an account ?</a>
+     
+  </div>
+</div>
+
+<% include ./partials/footer.ejs %>
