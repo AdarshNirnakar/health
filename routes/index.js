@@ -34,6 +34,15 @@ router.get('/show/reports', isLoggedIn, async function(req, res, next) {
   res.render('show',{user , nav: true});
 });
 
+router.get('/show/reports/elem:id', isLoggedIn, async function(req, res, next) {
+  const user = 
+  await userModel
+  .findOne({username: req.session.passport.user})
+  .populate("posts")
+  res.render('show',{user , nav: true});
+});
+
+
 router.get('/add', isLoggedIn, async function(req, res, next) {
   const user = await userModel.findOne({username: req.session.passport.user});
   res.render('add',{user , nav: true});
