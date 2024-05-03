@@ -1,0 +1,22 @@
+<% include ./partials/header.ejs %>
+<form action="/detailsOfPerson" method="post">
+  <input
+    class="border-2 rounded-md block mt-2 px-3 py-2"
+    type="number"
+    name="height"
+    placeholder="height"
+  />
+  <input
+    class="border-2 rounded-md block mt-2 px-3 py-2"
+    type="number"
+    name="weight"
+    placeholder="weight"
+  />
+  <input
+    class="border-2 block mt-2 px-3 py-2 bg-red-600 text-white rounded-full"
+    type="submit"
+    value="submit"
+  />
+</form>
+
+<% include ./partials/footer.ejs %>

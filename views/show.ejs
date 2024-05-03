@@ -1,22 +1,24 @@
 <% include ./partials/header.ejs %>
 <div class="w-full min-h-screen bg-zinc-500 px-10 py-8 text-white">
-    <h1 class="bg-zinc-500 text-3xl mb-5">
-        Your Reports
-    </h1>
-    <div class="cards flex flex-wrap gap-10">
-        <% user.posts.forEach(function(elem){ %>
-            <div class="card w-32">
-                <a href="/images/uploads/<%= elem.image %>">
-                    <div class="w-full h-40 bg-sky-200 rounded-lg overflow-hidden">
-                        <img class="w-full h-full object-cover" src="/images/uploads/<%= elem.image %>" alt="">
-                    </div>
-                    <h5 class="mt-2 text-sm"><%= elem.title %></h5>
-                    <p><%= elem.description %></p>
-                    <!-- Download option -->
-                    <a href="/images/uploads/<%= elem.image %>" download>Download</a>
-                </a>
-            </div>
-        <% }) %>
+  <h1 class="bg-zinc-500 text-3xl mb-5">Your Reports</h1>
+  <div class="cards flex flex-wrap gap-10">
+    <% user.posts.forEach(function(elem){ %>
+    <div class="card w-32">
+      <a href="/images/uploads/<%= elem.image %>">
+        <div class="w-full h-40 bg-sky-200 rounded-lg overflow-hidden">
+          <img
+            class="w-full h-full object-cover"
+            src="/images/uploads/<%= elem.image %>"
+            alt=""
+          />
+        </div>
+        <h5 class="mt-2 text-sm"><%= elem.title %></h5>
+        <p><%= elem.description %></p>
+        <!-- Download option -->
+        <a href="/images/uploads/<%= elem.image %>" download>Download</a>
+      </a>
     </div>
+    <% }) %>
+  </div>
 </div>
 <% include ./partials/footer.ejs %>
